@@ -1,0 +1,2578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Bharathapurapu Sai Harshith | Portfolio</title>
+
+    <meta name="description"
+        content="Personal portfolio of Bharathapurapu Sai Harshith, CSE-AIML student at Sandip University.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+
+    <style>
+
+        /* =========================================
+           GLOBAL STYLES
+        ========================================= */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #6c63ff;
+            --secondary: #00c6ff;
+            --dark: #080b18;
+            --dark2: #10152b;
+            --card: rgba(255,255,255,0.07);
+            --text: #ffffff;
+            --muted: #b6bdd3;
+            --border: rgba(255,255,255,0.12);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background:
+                radial-gradient(
+                    circle at 10% 20%,
+                    rgba(108,99,255,0.15),
+                    transparent 25%
+                ),
+                radial-gradient(
+                    circle at 90% 10%,
+                    rgba(0,198,255,0.12),
+                    transparent 25%
+                ),
+                var(--dark);
+
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        section {
+            padding: 100px 0;
+        }
+
+
+        /* =========================================
+           SECTION TITLE
+        ========================================= */
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .section-title span {
+            color: var(--secondary);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title h2 {
+            font-size: 40px;
+            margin-top: 8px;
+        }
+
+        .section-title p {
+            color: var(--muted);
+            max-width: 650px;
+            margin: 15px auto;
+        }
+
+
+        /* =========================================
+           NAVIGATION
+        ========================================= */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+
+            background: rgba(8,11,24,0.8);
+            backdrop-filter: blur(15px);
+
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        nav {
+            height: 75px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: 800;
+        }
+
+        .logo span {
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #d9deee;
+            font-size: 14px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+        .menu-btn {
+            display: none;
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+
+        /* =========================================
+           HOME
+        ========================================= */
+
+        #home {
+            min-height: 100vh;
+
+            display: flex;
+            align-items: center;
+
+            padding-top: 100px;
+        }
+
+        .hero {
+            max-width: 900px;
+            margin: auto;
+
+            text-align: center;
+        }
+
+        .hero-small {
+            color: var(--secondary);
+
+            font-weight: 600;
+            letter-spacing: 3px;
+
+            margin-bottom: 15px;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 78px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero h3 {
+            color: #dce2f4;
+
+            font-size: 23px;
+
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            color: var(--muted);
+
+            max-width: 750px;
+
+            margin: auto;
+
+            font-size: 16px;
+        }
+
+        .buttons {
+            display: flex;
+
+            justify-content: center;
+
+            flex-wrap: wrap;
+
+            gap: 15px;
+
+            margin-top: 30px;
+        }
+
+        .btn {
+            padding: 13px 25px;
+
+            border-radius: 30px;
+
+            border: 1px solid var(--border);
+
+            font-weight: 600;
+
+            transition: 0.3s;
+
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            border: none;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 10px 30px rgba(0,198,255,0.2);
+        }
+
+
+        /* =========================================
+           ABOUT
+        ========================================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 50px;
+
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 30px;
+
+            margin-bottom: 18px;
+        }
+
+        .about-text p {
+            color: var(--muted);
+
+            margin-bottom: 15px;
+        }
+
+        .info-box {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .info-item {
+            padding: 18px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 12px;
+        }
+
+        .info-item strong {
+            display: block;
+
+            color: var(--secondary);
+
+            font-size: 13px;
+        }
+
+        .info-item span {
+            font-size: 14px;
+
+            color: #e4e8f3;
+        }
+
+
+        /* =========================================
+           SKILLS
+        ========================================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 30px 20px;
+
+            border-radius: 18px;
+
+            text-align: center;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+
+            border-color:
+                rgba(0,198,255,0.5);
+        }
+
+        .skill-icon {
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 8px;
+        }
+
+        .skill-card p {
+            color: var(--muted);
+
+            font-size: 13px;
+        }
+
+
+        /* =========================================
+           EDUCATION
+        ========================================= */
+
+        .timeline {
+            max-width: 850px;
+
+            margin: auto;
+
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 20px;
+
+            top: 0;
+
+            height: 100%;
+
+            width: 2px;
+
+            background:
+                linear-gradient(
+                    var(--primary),
+                    var(--secondary)
+                );
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-left: 60px;
+
+            margin-bottom: 35px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            left: 10px;
+
+            top: 5px;
+
+            width: 22px;
+            height: 22px;
+
+            border-radius: 50%;
+
+            background: var(--secondary);
+
+            box-shadow:
+                0 0 15px var(--secondary);
+        }
+
+        .timeline-content {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 25px;
+
+            border-radius: 15px;
+        }
+
+        .timeline-content h3 {
+            margin-bottom: 5px;
+        }
+
+        .timeline-content .date {
+            color: var(--secondary);
+
+            font-size: 14px;
+        }
+
+        .timeline-content p {
+            color: var(--muted);
+
+            margin-top: 10px;
+        }
+
+
+        /* =========================================
+           PROJECTS
+        ========================================= */
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+
+            overflow: hidden;
+
+            transition: 0.35s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+
+            border-color: var(--secondary);
+        }
+
+        .project-image {
+            height: 170px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 65px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(108,99,255,0.35),
+                    rgba(0,198,255,0.15)
+                );
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            margin-bottom: 10px;
+        }
+
+        .project-content p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin-bottom: 18px;
+        }
+
+        .tags {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .tag {
+            background:
+                rgba(0,198,255,0.1);
+
+            border:
+                1px solid rgba(0,198,255,0.25);
+
+            color: #9de9ff;
+
+            padding: 5px 10px;
+
+            border-radius: 20px;
+
+            font-size: 11px;
+        }
+
+
+        /* =========================================
+           ACHIEVEMENTS
+        ========================================= */
+
+        .achievement-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .achievement {
+            padding: 30px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            border-radius: 18px;
+        }
+
+        .achievement-icon {
+            font-size: 40px;
+
+            margin-bottom: 15px;
+        }
+
+        .achievement p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin-top: 8px;
+        }
+
+
+        /* =========================================
+           CAREER INTERESTS
+        ========================================= */
+
+        .interest-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 20px;
+        }
+
+        .interest {
+            text-align: center;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            transition: 0.3s;
+        }
+
+        .interest:hover {
+            transform: translateY(-6px);
+
+            border-color: var(--secondary);
+        }
+
+        .interest-icon {
+            font-size: 35px;
+
+            margin-bottom: 10px;
+        }
+
+
+        /* =========================================
+           CONTACT
+        ========================================= */
+
+        .contact-wrapper {
+            display: grid;
+
+            grid-template-columns:
+                0.8fr 1.2fr;
+
+            gap: 40px;
+        }
+
+        .contact-info,
+        .contact-form {
+            background: var(--card);
+
+            border: 1px solid var(--border);
+
+            padding: 35px;
+
+            border-radius: 18px;
+        }
+
+        .contact-info h3 {
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-info > p {
+            color: var(--muted);
+
+            margin-bottom: 25px;
+        }
+
+        .contact-item {
+            margin-bottom: 20px;
+        }
+
+        .contact-item strong {
+            color: var(--secondary);
+
+            display: block;
+        }
+
+        .contact-item span {
+            color: #ddd;
+
+            font-size: 14px;
+        }
+
+        .socials {
+            display: flex;
+
+            gap: 12px;
+
+            margin-top: 20px;
+        }
+
+        .social {
+            width: 42px;
+            height: 42px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            border: 1px solid var(--border);
+
+            border-radius: 50%;
+
+            transition: 0.3s;
+        }
+
+        .social:hover {
+            background: var(--primary);
+
+            transform: translateY(-3px);
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+
+            background:
+                rgba(255,255,255,0.05);
+
+            border:
+                1px solid var(--border);
+
+            padding: 13px;
+
+            border-radius: 10px;
+
+            color: white;
+
+            font-family: inherit;
+
+            outline: none;
+        }
+
+        .form-group textarea {
+            height: 130px;
+
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--secondary);
+        }
+
+
+        /* =========================================
+           FOOTER
+        ========================================= */
+
+        footer {
+            padding: 30px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--muted);
+
+            font-size: 14px;
+
+            margin: 4px;
+        }
+
+        footer span {
+            color: var(--secondary);
+        }
+
+
+        /* =========================================
+           TOP BUTTON
+        ========================================= */
+
+        #topBtn {
+            position: fixed;
+
+            right: 25px;
+
+            bottom: 25px;
+
+            width: 45px;
+            height: 45px;
+
+            border: none;
+
+            border-radius: 50%;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            color: white;
+
+            font-size: 20px;
+
+            cursor: pointer;
+
+            display: none;
+
+            z-index: 999;
+        }
+
+
+        /* =========================================
+           REVEAL ANIMATION
+        ========================================= */
+
+        .reveal {
+            opacity: 0;
+
+            transform:
+                translateY(40px);
+
+            transition:
+                0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+
+            transform:
+                translateY(0);
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media(max-width:1000px) {
+
+            .skills-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .interest-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+            .projects-grid,
+            .achievement-grid {
+                grid-template-columns:
+                    repeat(2,1fr);
+            }
+
+        }
+
+
+        @media(max-width:750px) {
+
+            section {
+                padding: 75px 0;
+            }
+
+            .section-title h2 {
+                font-size: 32px;
+            }
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 75px;
+
+                left: -100%;
+
+                width: 100%;
+
+                flex-direction: column;
+
+                gap: 0;
+
+                background: #0a0e1e;
+
+                padding: 20px;
+
+                transition: 0.3s;
+            }
+
+            .nav-links.active {
+                left: 0;
+            }
+
+            .nav-links li {
+                padding: 15px 0;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .about-grid,
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid,
+            .achievement-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero h3 {
+                font-size: 19px;
+            }
+
+        }
+
+
+        @media(max-width:500px) {
+
+            .skills-grid,
+            .interest-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .info-box {
+                grid-template-columns: 1fr;
+            }
+
+            .buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         NAVIGATION
+    ========================================= -->
+
+    <header>
+
+        <div class="container">
+
+            <nav>
+
+                <a href="#home" class="logo">
+                    SH<span>.</span>
+                </a>
+
+
+                <ul class="nav-links" id="navLinks">
+
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="#about">About</a>
+                    </li>
+
+                    <li>
+                        <a href="#skills">Skills</a>
+                    </li>
+
+                    <li>
+                        <a href="#education">Education</a>
+                    </li>
+
+                    <li>
+                        <a href="#projects">Projects</a>
+                    </li>
+
+                    <li>
+                        <a href="#achievements">Achievements</a>
+                    </li>
+
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+
+                </ul>
+
+
+                <div class="menu-btn" id="menuBtn">
+                    ☰
+                </div>
+
+            </nav>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         HOME
+    ========================================= -->
+
+    <section id="home">
+
+        <div class="container">
+
+            <div class="hero reveal">
+
+                <div class="hero-small">
+                    HELLO, I'M
+                </div>
+
+
+                <h1>
+                    Bharathapurapu
+                    <span>Sai Harshith</span>
+                </h1>
+
+
+                <h3>
+                    CSE – Artificial Intelligence & Machine Learning Student
+                </h3>
+
+
+                <p>
+                    I am a passionate Computer Science and Engineering student
+                    specializing in Artificial Intelligence and Machine Learning.
+                    I am interested in software development, web development,
+                    artificial intelligence, machine learning and solving
+                    real-world problems through technology.
+                </p>
+
+
+                <div class="buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn btn-primary">
+
+                        View My Projects
+
+                    </a>
+
+
+                    <a
+                        href="#about"
+                        class="btn">
+
+                        About Me
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn">
+
+                        Contact Me
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ABOUT
+    ========================================= -->
+
+    <section id="about">
+
+        <div class="container">
+
+
+            <div class="section-title reveal">
+
+                <span>Who I Am</span>
+
+                <h2>About Me</h2>
+
+                <p>
+                    Get to know more about my education,
+                    interests and career goals.
+                </p>
+
+            </div>
+
+
+
+            <div class="about-grid">
+
+
+                <div class="about-text reveal">
+
+                    <h3>
+                        Passionate About Technology & Innovation
+                    </h3>
+
+
+                    <p>
+                        My name is
+                        <strong>
+                            Bharathapurapu Sai Harshith
+                        </strong>.
+                        I am a Computer Science and Engineering student
+                        specializing in Artificial Intelligence and Machine
+                        Learning at Sandip University.
+                    </p>
+
+
+                    <p>
+                        I enjoy learning programming, data structures,
+                        algorithms, web development and emerging technologies.
+                    </p>
+
+
+                    <p>
+                        My aim is to develop strong technical skills and
+                        create useful software applications that can solve
+                        real-world problems.
+                    </p>
+
+
+                    <div class="buttons">
+
+                        <a
+                            href="#contact"
+                            class="btn btn-primary">
+
+                            Let's Connect
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="info-box reveal">
+
+
+                    <div class="info-item">
+
+                        <strong>FULL NAME</strong>
+
+                        <span>
+                            Bharathapurapu Sai Harshith
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>DEGREE</strong>
+
+                        <span>
+                            B.Tech – CSE
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>SPECIALIZATION</strong>
+
+                        <span>
+                            AI & Machine Learning
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>UNIVERSITY</strong>
+
+                        <span>
+                            Sandip University
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>EMAIL</strong>
+
+                        <span>
+                            saiharshithbharathapurapu@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <div class="info-item">
+
+                        <strong>FIELD</strong>
+
+                        <span>
+                            Computer Science
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         SKILLS
+    ========================================= -->
+
+    <section id="skills">
+
+        <div class="container">
+
+
+            <div class="section-title reveal">
+
+                <span>My Abilities</span>
+
+                <h2>Technical Skills</h2>
+
+                <p>
+                    Technologies and concepts I am currently learning
+                    and developing skills in.
+                </p>
+
+            </div>
+
+
+
+            <div class="skills-grid">
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        💻
+                    </div>
+
+                    <h3>C++</h3>
+
+                    <p>
+                        Object-oriented programming,
+                        algorithms and problem solving.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🌐
+                    </div>
+
+                    <h3>HTML & CSS</h3>
+
+                    <p>
+                        Responsive websites,
+                        layouts and modern interfaces.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        ⚡
+                    </div>
+
+                    <h3>JavaScript</h3>
+
+                    <p>
+                        Interactive websites and
+                        frontend functionality.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🐍
+                    </div>
+
+                    <h3>Python</h3>
+
+                    <p>
+                        Programming fundamentals,
+                        automation and AI/ML basics.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🤖
+                    </div>
+
+                    <h3>Artificial Intelligence</h3>
+
+                    <p>
+                        Exploring intelligent systems
+                        and AI concepts.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🧠
+                    </div>
+
+                    <h3>Machine Learning</h3>
+
+                    <p>
+                        Learning ML algorithms,
+                        data and predictive models.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🌳
+                    </div>
+
+                    <h3>Data Structures</h3>
+
+                    <p>
+                        Trees, searching, sorting and
+                        algorithmic problem solving.
+                    </p>
+
+                </div>
+
+
+                <div class="skill-card reveal">
+
+                    <div class="skill-icon">
+                        🔧
+                    </div>
+
+                    <h3>Git & GitHub</h3>
+
+                    <p>
+                        Source code management and
+                        project version control.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         EDUCATION
+    ========================================= -->
+
+    <section id="education">
+
+        <div class="container">
+
+
+            <div class="section-title reveal">
+
+                <span>Academic Journey</span>
+
+                <h2>Education</h2>
+
+            </div>
+
+
+
+            <div class="timeline">
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-content">
+
+                        <div class="date">
+                            Currently Pursuing
+                        </div>
+
+                        <h3>
+                            B.Tech – Computer Science & Engineering
+                        </h3>
+
+                        <h4>
+                            Artificial Intelligence & Machine Learning
+                        </h4>
+
+                        <p>
+                            <strong>
+                                Sandip University
+                            </strong>
+                        </p>
+
+                        <p>
+                            Studying programming, data structures,
+                            algorithms, artificial intelligence,
+                            machine learning and software development.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-content">
+
+                        <div class="date">
+                            Higher Secondary Education
+                        </div>
+
+                        <h3>
+                            Higher Secondary Education
+                        </h3>
+
+                        <p>
+                            Developed a strong foundation in science,
+                            mathematics and computer-related subjects.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="timeline-item reveal">
+
+                    <div class="timeline-dot"></div>
+
+
+                    <div class="timeline-content">
+
+                        <div class="date">
+                            Secondary Education
+                        </div>
+
+                        <h3>
+                            Secondary Education
+                        </h3>
+
+                        <p>
+                            Built the foundation for logical thinking,
+                            mathematics and technology.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PROJECTS
+    ========================================= -->
+
+    <section id="projects">
+
+        <div class="container">
+
+
+            <div class="section-title reveal">
+
+                <span>My Work</span>
+
+                <h2>Projects</h2>
+
+                <p>
+                    Academic and personal projects demonstrating
+                    my programming and development skills.
+                </p>
+
+            </div>
+
+
+
+            <div class="projects-grid">
+
+
+                <!-- PROJECT 1 -->
+
+                <div class="project-card reveal">
+
+                    <div class="project-image">
+                        🌳
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            BST Student Record Manager
+                        </h3>
+
+                        <p>
+                            A student record management system based on
+                            Binary Search Tree concepts. It allows student
+                            records to be stored, searched and managed
+                            efficiently.
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                C++
+                            </span>
+
+                            <span class="tag">
+                                BST
+                            </span>
+
+                            <span class="tag">
+                                Data Structures
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 2 -->
+
+                <div class="project-card reveal">
+
+                    <div class="project-image">
+                        🤖
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Employee Semantic Network
+                        </h3>
+
+                        <p>
+                            A knowledge-based web application representing
+                            employee relationships, skills, teams,
+                            designations and organizational hierarchy.
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                            <span class="tag">
+                                Knowledge Graph
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 3 -->
+
+                <div class="project-card reveal">
+
+                    <div class="project-image">
+                        🌡️
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Temperature Controlled Fan
+                        </h3>
+
+                        <p>
+                            A mini-project that automatically controls
+                            fan operation based on surrounding temperature
+                            using temperature sensing and electronic components.
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Electronics
+                            </span>
+
+                            <span class="tag">
+                                Sensors
+                            </span>
+
+                            <span class="tag">
+                                Automation
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 4 -->
+
+                <div class="project-card reveal">
+
+                    <div class="project-image">
+                        💡
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Automatic Street Light
+                        </h3>
+
+                        <p>
+                            An automatic lighting system designed to
+                            control lights based on surrounding
+                            environmental conditions.
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                Electronics
+                            </span>
+
+                            <span class="tag">
+                                Automation
+                            </span>
+
+                            <span class="tag">
+                                Sensors
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 5 -->
+
+                <div class="project-card reveal">
+
+                    <div class="project-image">
+                        🔎
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Searching Algorithms
+                        </h3>
+
+                        <p>
+                            Implementation of recursive and non-recursive
+                            linear and binary search algorithms using C++.
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                C++
+                            </span>
+
+                            <span class="tag">
+                                Algorithms
+                            </span>
+
+                            <span class="tag">
+                                DSA
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- PROJECT 6 -->
+
+                <div class="project-card reveal">
+
+                    <div class="project-image">
+                        🌐
+                    </div>
+
+                    <div class="project-content">
+
+                        <h3>
+                            Personal Portfolio Website
+                        </h3>
+
+                        <p>
+                            Responsive personal portfolio website created
+                            to showcase education, skills, projects,
+                            achievements and professional profile.
+                        </p>
+
+                        <div class="tags">
+
+                            <span class="tag">
+                                HTML
+                            </span>
+
+                            <span class="tag">
+                                CSS
+                            </span>
+
+                            <span class="tag">
+                                JavaScript
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         ACHIEVEMENTS
+    ========================================= -->
+
+    <section id="achievements">
+
+        <div class="container">
+
+
+            <div class="section-title reveal">
+
+                <span>Milestones</span>
+
+                <h2>
+                    Achievements & Certifications
+                </h2>
+
+                <p>
+                    Academic achievements and technical learning milestones.
+                </p>
+
+            </div>
+
+
+
+            <div class="achievement-grid">
+
+
+                <div class="achievement reveal">
+
+                    <div class="achievement-icon">
+                        🏆
+                    </div>
+
+                    <h3>
+                        Academic Projects
+                    </h3>
+
+                    <p>
+                        Developed multiple academic projects involving
+                        programming, web development and electronics.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement reveal">
+
+                    <div class="achievement-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Programming Practice
+                    </h3>
+
+                    <p>
+                        Practicing C++, data structures, algorithms
+                        and problem-solving techniques.
+                    </p>
+
+                </div>
+
+
+                <div class="achievement reveal">
+
+                    <div class="achievement-icon">
+                        📚
+                    </div>
+
+                    <h3>
+                        Technical Learning
+                    </h3>
+
+                    <p>
+                        Continuously developing knowledge in artificial
+                        intelligence, machine learning and web development.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CAREER INTERESTS
+    ========================================= -->
+
+    <section id="interests">
+
+        <div class="container">
+
+
+            <div class="section-title reveal">
+
+                <span>Future Goals</span>
+
+                <h2>
+                    Career Interests
+                </h2>
+
+            </div>
+
+
+
+            <div class="interest-grid">
+
+
+                <div class="interest reveal">
+
+                    <div class="interest-icon">
+                        🤖
+                    </div>
+
+                    <h3>
+                        Artificial Intelligence
+                    </h3>
+
+                </div>
+
+
+                <div class="interest reveal">
+
+                    <div class="interest-icon">
+                        🧠
+                    </div>
+
+                    <h3>
+                        Machine Learning
+                    </h3>
+
+                </div>
+
+
+                <div class="interest reveal">
+
+                    <div class="interest-icon">
+                        🌐
+                    </div>
+
+                    <h3>
+                        Web Development
+                    </h3>
+
+                </div>
+
+
+                <div class="interest reveal">
+
+                    <div class="interest-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Software Development
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CONTACT
+    ========================================= -->
+
+    <section id="contact">
+
+        <div class="container">
+
+
+            <div class="section-title reveal">
+
+                <span>Get In Touch</span>
+
+                <h2>
+                    Contact Me
+                </h2>
+
+                <p>
+                    Interested in collaboration, internships or
+                    technology projects? Feel free to contact me.
+                </p>
+
+            </div>
+
+
+
+            <div class="contact-wrapper">
+
+
+                <!-- CONTACT INFORMATION -->
+
+                <div class="contact-info reveal">
+
+                    <h3>
+                        Let's Connect
+                    </h3>
+
+
+                    <p>
+                        I am interested in learning opportunities,
+                        internships, academic collaborations and
+                        technology projects.
+                    </p>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            📧 Email
+                        </strong>
+
+                        <span>
+                            saiharshithbharathapurapu@gmail.com
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            🎓 University
+                        </strong>
+
+                        <span>
+                            Sandip University
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            💻 Specialization
+                        </strong>
+
+                        <span>
+                            Computer Science – AIML
+                        </span>
+
+                    </div>
+
+
+                    <div class="contact-item">
+
+                        <strong>
+                            📍 Location
+                        </strong>
+
+                        <span>
+                            India
+                        </span>
+
+                    </div>
+
+
+                    <div class="socials">
+
+
+                        <!-- Replace # with your actual GitHub URL -->
+
+                        <a
+                            href="#"
+                            class="social"
+                            title="GitHub">
+
+                            GH
+
+                        </a>
+
+
+                        <!-- Replace # with your actual LinkedIn URL -->
+
+                        <a
+                            href="#"
+                            class="social"
+                            title="LinkedIn">
+
+                            in
+
+                        </a>
+
+
+                        <a
+                            href="mailto:saiharshithbharathapurapu@gmail.com"
+                            class="social"
+                            title="Email">
+
+                            @
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- CONTACT FORM -->
+
+                <div class="contact-form reveal">
+
+                    <form id="contactForm">
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Your Name
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                placeholder="Enter your name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Email Address
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                placeholder="Enter your email"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Subject
+                            </label>
+
+                            <input
+                                type="text"
+                                id="subject"
+                                placeholder="Enter subject"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Message
+                            </label>
+
+                            <textarea
+                                id="message"
+                                placeholder="Write your message..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <button
+                            type="submit"
+                            class="btn btn-primary">
+
+                            Send Message 🚀
+
+                        </button>
+
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <p>
+                ©
+                <span id="year"></span>
+
+                <span>
+                    Bharathapurapu Sai Harshith
+                </span>
+
+                . All Rights Reserved.
+            </p>
+
+
+            <p>
+                Designed & Developed with ❤️ using
+                HTML, CSS & JavaScript.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =========================================
+         SCROLL TOP BUTTON
+    ========================================= -->
+
+    <button id="topBtn">
+        ↑
+    </button>
+
+
+
+    <!-- =========================================
+         JAVASCRIPT
+    ========================================= -->
+
+    <script>
+
+
+        /* =================================
+           MOBILE MENU
+        ================================= */
+
+        const menuBtn =
+            document.getElementById("menuBtn");
+
+        const navLinks =
+            document.getElementById("navLinks");
+
+
+        menuBtn.addEventListener(
+            "click",
+            function () {
+
+                navLinks.classList.toggle("active");
+
+            }
+        );
+
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(function(link) {
+
+                link.addEventListener(
+                    "click",
+                    function() {
+
+                        navLinks.classList.remove(
+                            "active"
+                        );
+
+                    }
+                );
+
+            });
+
+
+
+        /* =================================
+           CURRENT YEAR
+        ================================= */
+
+        document.getElementById("year")
+            .textContent =
+            new Date().getFullYear();
+
+
+
+        /* =================================
+           SCROLL TOP
+        ================================= */
+
+        const topBtn =
+            document.getElementById("topBtn");
+
+
+        window.addEventListener(
+            "scroll",
+            function() {
+
+                if (window.scrollY > 400) {
+
+                    topBtn.style.display =
+                        "block";
+
+                }
+
+                else {
+
+                    topBtn.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+
+        topBtn.addEventListener(
+            "click",
+            function() {
+
+                window.scrollTo({
+
+                    top: 0,
+
+                    behavior: "smooth"
+
+                });
+
+            }
+        );
+
+
+
+        /* =================================
+           REVEAL ANIMATION
+        ================================= */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function(entries) {
+
+                    entries.forEach(
+                        function(entry) {
+
+                            if (
+                                entry.isIntersecting
+                            ) {
+
+                                entry.target
+                                    .classList
+                                    .add("active");
+
+                            }
+
+                        }
+                    );
+
+                },
+
+                {
+                    threshold: 0.15
+                }
+
+            );
+
+
+        revealElements.forEach(
+            function(element) {
+
+                observer.observe(element);
+
+            }
+        );
+
+
+
+        /* =================================
+           CONTACT FORM
+        ================================= */
+
+        const contactForm =
+            document.getElementById(
+                "contactForm"
+            );
+
+
+        contactForm.addEventListener(
+            "submit",
+            function(event) {
+
+                event.preventDefault();
+
+
+                const name =
+                    document.getElementById(
+                        "name"
+                    ).value;
+
+
+                const email =
+                    document.getElementById(
+                        "email"
+                    ).value;
+
+
+                const subject =
+                    document.getElementById(
+                        "subject"
+                    ).value;
+
+
+                const message =
+                    document.getElementById(
+                        "message"
+                    ).value;
+
+
+                const body =
+                    "Name: " +
+                    name +
+                    "\n\n" +
+
+                    "Email: " +
+                    email +
+                    "\n\n" +
+
+                    "Message:\n" +
+                    message;
+
+
+                const mailLink =
+                    "mailto:saiharshithbharathapurapu@gmail.com" +
+
+                    "?subject=" +
+
+                    encodeURIComponent(subject) +
+
+                    "&body=" +
+
+                    encodeURIComponent(body);
+
+
+                window.location.href =
+                    mailLink;
+
+
+            }
+        );
+
+
+
+        /* =================================
+           ACTIVE NAVIGATION
+        ================================= */
+
+        const sections =
+            document.querySelectorAll(
+                "section"
+            );
+
+
+        const navItems =
+            document.querySelectorAll(
+                ".nav-links a"
+            );
+
+
+        window.addEventListener(
+            "scroll",
+            function() {
+
+                let current = "";
+
+
+                sections.forEach(
+                    function(section) {
+
+                        const sectionTop =
+                            section.offsetTop - 150;
+
+
+                        if (
+                            window.scrollY >=
+                            sectionTop
+                        ) {
+
+                            current =
+                                section.getAttribute(
+                                    "id"
+                                );
+
+                        }
+
+                    }
+                );
+
+
+                navItems.forEach(
+                    function(link) {
+
+                        link.style.color = "";
+
+
+                        if (
+                            link.getAttribute(
+                                "href"
+                            ) ===
+                            "#" + current
+                        ) {
+
+                            link.style.color =
+                                "#00c6ff";
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
